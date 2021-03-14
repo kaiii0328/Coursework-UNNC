@@ -1,0 +1,79 @@
+//this chip calculate multiplication between 2 numbers
+CHIP Mult {
+    IN x[16], y[16];	//x and y are two multiply operands
+    OUT out[16];
+
+    PARTS:
+	// calculate bit by bit,scanned one operand from right to left
+	// if the number on current bit is 0,shift  temporary result one bit right
+	//if the number on current bit is 1, add the other operand onto temporary result then shift right one bit
+	
+	Shift16(a[0..15]=false,out=ans);	//initialize
+	Add16(a=x,b=ans,out=anso1);
+	Mux16(a=false,b=anso1,sel=y[0],out=bit0);
+	
+	Shift16(a=x,out=shift1);
+	Add16(a=bit0,b=shift1,out=anso2);
+	Mux16(a=bit0,b=anso2,sel=y[1],out=bit1);
+
+	Shift16(a=shift1,out=shift2);
+	Add16(a=bit1,b=shift2,out=anso3);
+	Mux16(a=bit1,b=anso3,sel=y[2],out=bit2);
+
+	Shift16(a=shift2,out=shift3);
+	Add16(a=bit2,b=shift3,out=anso4);
+	Mux16(a=bit2,b=anso4,sel=y[3],out=bit3);
+
+	Shift16(a=shift3,out=shift4);
+	Add16(a=bit3,b=shift4,out=anso5);
+	Mux16(a=bit3,b=anso5,sel=y[4],out=bit4);
+
+	Shift16(a=shift4,out=shift5);
+	Add16(a=bit4,b=shift5,out=anso6);
+	Mux16(a=bit4,b=anso6,sel=y[5],out=bit5);
+
+	Shift16(a=shift5,out=shift6);
+	Add16(a=bit5,b=shift6,out=anso7);
+	Mux16(a=bit5,b=anso7,sel=y[6],out=bit6);
+
+	Shift16(a=shift6,out=shift7);
+	Add16(a=bit6,b=shift7,out=anso8);
+	Mux16(a=bit6,b=anso8,sel=y[7],out=bit7);
+	
+	Shift16(a=shift7,out=shift8);
+	Add16(a=bit7,b=shift8,out=anso9);
+	Mux16(a=bit7,b=anso9,sel=y[8],out=bit8);
+
+	Shift16(a=shift8,out=shift9);
+	Add16(a=bit8,b=shift9,out=anso10);
+	Mux16(a=bit8,b=anso10,sel=y[9],out=bit9);
+
+	Shift16(a=shift9,out=shift10);
+	Add16(a=bit9,b=shift10,out=anso11);
+	Mux16(a=bit9,b=anso11,sel=y[10],out=bit10);
+
+	Shift16(a=shift10,out=shift11);
+	Add16(a=bit10,b=shift11,out=anso12);
+	Mux16(a=bit10,b=anso12,sel=y[11],out=bit11);
+
+	Shift16(a=shift11,out=shift12);
+	Add16(a=bit11,b=shift12,out=anso13);
+	Mux16(a=bit11,b=anso13,sel=y[12],out=bit12);
+
+	Shift16(a=shift12,out=shift13);
+	Add16(a=bit12,b=shift13,out=anso14);
+	Mux16(a=bit12,b=anso14,sel=y[13],out=bit13);
+
+	Shift16(a=shift13,out=shift14);
+	Add16(a=bit13,b=shift14,out=anso15);
+	Mux16(a=bit13,b=anso15,sel=y[14],out=bit14);
+
+	Shift16(a=shift14,out=shift15);
+	Add16(a=bit14,b=shift15,out=anso16);
+	Mux16(a=bit14,b=anso16,sel=y[15],out=bit15);
+
+	Or16(a=bit15,b[0..15]=false,out=out);
+
+
+
+}

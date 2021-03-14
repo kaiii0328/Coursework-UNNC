@@ -1,0 +1,13 @@
+Persona for Single-account user
+
+| Persona                   | College Student                                              | Workplace newbie                                             | Retired  Old man                                             |
+| :------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Photo                     | ![alt text](s1.png "it's me")                                | ![alt text](s2.jpg "it's me")                                | ![alt text](s3.jpg )                                         |
+| Fictional Name            | Wangsu Long                                                  | Alice Swift                                                  | James Johnson                                                |
+| Job/Major responsibility  | Sophomore in University                                      | Consulting Manger                                            | retired                                                      |
+| Demographics              | 1. 20 years old<br />2. Only child in family<br />3. Studying Computer Science | 1. 25 years old<br />2. live with boyfriend<br />3. master in Economics | 1. 75 years old<br />2. married<br />                        |
+| Environment               | He is a diligent student who is from nowhere but entered a top university far away from home. He is currently studying hard for scholarship which would reduce his financial pressure while he has to have a part-time job to cover daily expenses. | She is a consulting manager  working in McKinssey. Her career starts off quite well and her life is on track. Together with her boyfriend, they have the ability to take care of themselves in the city without bothered by financial burden. | He is an old man whose only income now is pension. In order to extract part of the money to support his wife's medical treatment ,He needs to balance the income and expense carefully |
+| Financial Management Goal | Save money and prepare for furthering study overseas after graduation | Informed of the general fund flow without going too detailed | Divide the pension into different parts for different daily usage purpose |
+| Loan                      | Student Loan                                                 | /                                                            | /                                                            |
+
+[Back to report](Lab4report.md)

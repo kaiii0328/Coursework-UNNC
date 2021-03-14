@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/managerregister.css"/>
+    <script type="text/javascript" src="register.js"></script>
+</head>
+<body>
+    <label id="tosignin">Already have an account?<span class="link" onclick="gotosignin()"> sign in </span></label>
+    <h1 class="title">Join us in the world</h1>
+    <h4> sign up and we'll get you started</h4>
+    <div>
+        <form  id="form" action="managerregister.php" method="post">
+            <ul>
+                <li>
+                    <label>Usename：</label>
+                    <input type="text" id="username" name="username" maxlength="25" onblur="validateName()"/>
+                    <span class="helper-text" id="errorname"></span>
+                </li>
+                <li>
+                    <label>Password：</label>
+                    <input type="password" id="password" name="password" maxlength="20" onblur="validatePassword()"/>
+                    <span class="helper-text" id="errorpassword"></span>
+                </li>               
+                <li style="margin-left:180px;">By signing up you agree to our <span style="color:blue;text-decoration:underline;">terms & privacy conditions</span></li>
+                <li class="checkbox"> <input type="checkbox" id="confirm"/>  I may be called or messaged via my phone number     </li>
+                <li>
+                    <input class="submit" type="submit" value="Get started" />
+                </li>
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

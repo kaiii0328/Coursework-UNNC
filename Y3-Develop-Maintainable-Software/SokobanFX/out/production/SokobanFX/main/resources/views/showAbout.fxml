@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="victoryText" strokeType="OUTSIDE" strokeWidth="0.0" text="Game created by Wangkai JIN" textAlignment="CENTER" wrappingWidth="326.6402049064636">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="40.0" top="80.0" />
+         </VBox.margin>
+      </Text>
+   </children>
+</VBox>

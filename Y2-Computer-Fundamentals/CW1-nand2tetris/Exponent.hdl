@@ -1,0 +1,17 @@
+// 0<x <= 9,0<y<=5
+// this chip calculates the exponential result of x^y
+CHIP Exponent {
+    IN x[16], y[16];	//x is the base and y is the power
+    OUT out[16];
+
+    PARTS:
+	Inc16(in[0..15]=false,out=one);		//make a number 1 for the base of multiplication
+	Mult(x=one,y=x,out=x1);
+	Mult(x=x,y=x,out=x2);
+	Mult(x=x,y=x2,out=x3);
+	Mult(x=x,y=x3,out=x4);
+	Mult(x=x,y=x4,out=x5);		//calculate all the possible result,power number from 0 to 5
+	Mux8Way16(a=one,b=x1,c=x2,d=x3,e=x4,f=x5,g[0..15]=false,h[0..15]=false,sel=
+y[0..2],out=out);		//max of y is 0101, so a 8-way input and 3-bit select pin is enought to filter the right result
+	
+}

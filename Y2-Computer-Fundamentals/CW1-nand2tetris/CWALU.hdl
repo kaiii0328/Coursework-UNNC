@@ -1,0 +1,51 @@
+CHIP CWALU {
+    IN  
+        x[16], y[16],      
+        S, // subtract y from x
+        M,  // multiply x by y	
+        D,  // divide x by 2	shift operation
+        F,  // calculate the exponential expression	
+        GL;  	// if x is bigger than y	
+
+
+    OUT 
+        out[16],
+        of; //of==1 if  overflow happens
+
+    PARTS:
+	//decide x is bigger than y
+	Bigger(x=x,y=y,out=big);
+	Mux16(a=false,b[0]=big,b[1..15]=false,sel=GL,out=bigout);
+	// end of (x>y?x:y)
+	
+	//subtract y from x		
+	Sub(x=x,y=y,out=sub,out[15]=ressign);
+	Mux16(a=false,b=sub,sel=S,out=subout);
+	// end of x-y
+
+	//multiply x by y	
+	Mult(x=x,y=y,out=mult);
+	Mux16(a=false,b=mult,sel=M,out=multout);
+	
+	
+	//divide x by 2
+	Or16(a=false,b=x,out=orx,out[1..15]=rightx);
+	Or16(a=false,b[15]=false,b[0..14]=rightx,out=retdivide);
+	Mux16(a=false,b=retdivide,sel=D,out=divideout);
+	
+	//exponent
+	Exponent(x=x,y=y,out=exponent,out[15]=sign);
+	Mux16(a=false,b=exponent,sel=F,out=expout);
+	//check whether power operation overflows
+	Xor(a=false,b=sign,out=overflow);			//if  the left most digit of the output is 1,
+	Mux(a=false,b=true,sel=overflow,out=of2);	//then overflow happens
+	
+	
+	Mux(a=false,b=of2,sel=F,out=of);
+	
+	Or16(a=subout,b=multout,out=tem1);
+	Or16(a=divideout,b=expout,out=tem2);
+	Or16(a=tem1,b=tem2,out=tem3);
+	Or16(a=tem3,b=bigout,out=out);	//output the final result
+							
+}

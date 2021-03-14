@@ -1,0 +1,16 @@
+CHIP Bigger{
+    IN x[16],y[16];
+    OUT out;
+
+    PARTS:
+	Xor(a=x[15],b=y[15],out=sign1);	
+	Mux(a=true,b=false,sel=sign1,out=samesign);	//samesign =1,otherwise 0	
+	//when x y have same sign
+	Add16(a=y,b[0..15]=true,out=minusy); 		//minusy=y-1
+	Not16(in=minusy,out=noty);			//-y=not(y+(-1))
+	Add16(a=x,b=noty,out=tem,out[15]=tem15);	//tem=x-y, if x>y,tem>0,tem[15]=0
+	Mux(a=true,b=false,sel=tem15,out=temGL);	//temGL =1 when x>y
+	//when x y have different sign
+	Mux(a=true,b=false,sel=x[15],out=xsign);	//when x,y have different sign, if x<0,then y>0,x<y;x>y else
+	Mux(a=xsign,b=temGL,sel=samesign,out=out);
+}

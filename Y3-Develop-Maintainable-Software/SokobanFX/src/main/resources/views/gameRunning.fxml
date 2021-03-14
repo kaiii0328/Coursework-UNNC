@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.GameRunningController">
+  <columnConstraints>
+    <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints fillHeight="true" maxHeight="30.0" minHeight="30.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="true" vgrow="SOMETIMES" />
+
+  </rowConstraints>
+   <children>
+      <MenuBar fx:id="menubar" visible="false">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#saveGame" text="Save Game" />
+                  <MenuItem fx:id="menuLoad" mnemonicParsing="false" onAction="#loadGame" text="Load Game" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="btnExit" mnemonicParsing="false" onAction="#closeGame" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Level">
+            <items>
+              <MenuItem fx:id="menuUndo" mnemonicParsing="false" onAction="#undo" text="undo" />
+                  <MenuItem fx:id="menuReset" mnemonicParsing="false" onAction="#resetLevel" text="Reset Level" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Toggle">
+               <items>
+                  <MenuItem fx:id="menuMusic1" mnemonicParsing="false" onAction="#toggleMusic" text="Toggle music" />
+                  <MenuItem fx:id="menuDebug1" mnemonicParsing="false" onAction="#toggleDebug" text="Toggle debug" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="menuAbout" mnemonicParsing="false" onAction="#showAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane fx:id="gameGrid" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="true" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints fillHeight="true" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="true" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints fillHeight="true" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints fillHeight="true" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox fx:id="gameMap1VBox" prefHeight="126.0" prefWidth="590.0" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="gameMap1Pic" fitHeight="280.0" fitWidth="400.0" onMouseClicked="#setMap1" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/gamescene1.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text fx:id="click_to_start" onMouseClicked="#startGame" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Map 1" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="130.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+               <GridPane.margin>
+                  <Insets left="-100.0" top="140.0" />
+               </GridPane.margin>
+            </VBox>
+            <VBox fx:id="gameMap2VBox" prefHeight="126.0" prefWidth="590.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <ImageView fx:id="gameMap2Pic" fitHeight="280.0" fitWidth="400.0" onMouseClicked="#setMap2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/gamescene2.jpg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="-30.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Text fx:id="click_to_start1" onMouseClicked="#startGame" strokeType="OUTSIDE" strokeWidth="0.0" text="Game Map 2" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets left="130.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets left="-50.0" top="-100.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="-50.0" />
+               </padding>
+            </VBox>
+         </children>
+      </GridPane>
+      <VBox fx:id="pauseMenu" opacity="0.8" prefHeight="396.0" prefWidth="596.0" style="-fx-background-color: black;" visible="false" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="timer" text="Label" textFill="#f5f4f4">
+               <VBox.margin>
+                  <Insets left="210.0" top="70.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Constantia" size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnResume" mnemonicParsing="false" onMouseClicked="#pause" prefWidth="100.0" text="Resume" translateX="250.0" translateY="125.0">
+               <VBox.margin>
+                  <Insets top="-40.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" onMouseClicked="#closeGame" prefWidth="100.0" text="Exit" translateX="250.0" translateY="260.0" />
+            <Button fx:id="btnHome" mnemonicParsing="false" onMouseClicked="#returnHome" prefWidth="100.0" text="Home" translateX="250.0" translateY="130.0" />
+            <Button fx:id="btnSetting" mnemonicParsing="false" onMouseClicked="#switchMenu" prefWidth="100.0" text="Settings" translateX="250.0" translateY="160.0" />
+            <Label fx:id="levelInfoLabel" text="Label" textFill="#f5f4f4">
+               <font>
+                  <Font name="Constantia" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="220.0" top="-30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="moveInfoLabel" text="Label" textFill="#f5f4f4">
+               <font>
+                  <Font name="Constantia" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="220.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox fx:id="pauseMenu2" opacity="0.79" prefHeight="396.0" prefWidth="596.0" style="-fx-background-color: black;" visible="false" GridPane.rowIndex="1">
+         <children>
+            <Text fill="#ebe0e0" strokeType="OUTSIDE" strokeWidth="0.0" text="Music Volume" translateX="170.0" translateY="180.0" />
+            <Slider fx:id="volumeSlider" maxHeight="30.0" maxWidth="90.0" prefHeight="20.0" prefWidth="40.0" translateX="280.0" translateY="165.0" />
+            <Button fx:id="btnChgKpr" mnemonicParsing="false" onMouseClicked="#changeKeeper" prefHeight="23.0" prefWidth="133.0" text="Change keeper">
+               <VBox.margin>
+                  <Insets left="220.0" top="220.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnChgKpr1" mnemonicParsing="false" onMouseClicked="#changeStyle1" prefHeight="23.0" prefWidth="126.0" text="Change to Style 1">
+               <VBox.margin>
+                  <Insets left="150.0" top="50.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnChgKpr11" mnemonicParsing="false" onMouseClicked="#changeStyle2" prefHeight="23.0" prefWidth="130.0" text="Change to Style 2">
+               <VBox.margin>
+                  <Insets left="330.0" top="-25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnBack" mnemonicParsing="false" onMouseClicked="#switchMenu" prefWidth="100.0" text="Back" translateX="240.0" translateY="240.0">
+               <VBox.margin>
+                  <Insets top="-160.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </children>
+</GridPane>

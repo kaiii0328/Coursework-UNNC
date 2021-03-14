@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.TotalScoresController">
+   <top>
+      <MenuButton mnemonicParsing="false" text="Choose a map" BorderPane.alignment="TOP_LEFT">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#defaultMapScores" text="Example Game!" />
+          <MenuItem mnemonicParsing="false" onAction="#newMapScores" text="Adventure" />
+        </items>
+         <BorderPane.margin>
+            <Insets left="120.0" top="15.0" />
+         </BorderPane.margin>
+      </MenuButton>
+   </top>
+   <center>
+      <VBox fx:id="root" alignment="CENTER" fillWidth="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="320.0" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="50.0" top="20.0" />
+         </BorderPane.margin>
+         <children>
+            <Text fx:id="mapName" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false">
+               <VBox.margin>
+                  <Insets left="-60.0" />
+               </VBox.margin>
+            </Text>
+            <ListView fx:id="listView" prefHeight="180.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="70.0" top="20.0" />
+               </VBox.margin></ListView>
+         </children></VBox>
+   </center>
+</BorderPane>

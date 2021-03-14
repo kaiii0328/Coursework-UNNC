@@ -1,0 +1,1 @@
+[Please go to Lab01 folder](../Lab01/indexLab1.md)

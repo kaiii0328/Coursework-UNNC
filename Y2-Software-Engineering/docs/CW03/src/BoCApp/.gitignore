@@ -1,0 +1,18 @@
+<<<<<<< HEAD
+/bin/
+=======
+/BoCApp.class
+/BoCCategory.class
+/BoCTransaction.class
+/Test_BoCTransaction_part1.class
+/Test_Transaction_part1.class
+/Test_Transaction_part1$1.class
+/Test_Transaction_part2.class
+<<<<<<< HEAD
+/Test_Transaction_part3Test.class
+/Test_BoCTransaction_Part3.class
+=======
+>>>>>>> 4ca6a5f640f7369a0e348e3ad5a90e90f8a52685
+/Test_Transaction_Part3.class
+/BoCTransactionTest.class
+>>>>>>> testBoCTransaction

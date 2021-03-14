@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.GameStartController">
+   <children>
+      <ImageView fitHeight="422.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/start2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnStart" layoutX="442.0" layoutY="193.0" mnemonicParsing="false" onMouseClicked="#gameStart" prefHeight="36.0" prefWidth="94.0" text="Start" />
+      <Button fx:id="btnScores" layoutX="442.0" layoutY="238.0" mnemonicParsing="false" onMouseClicked="#showScores" prefHeight="36.0" prefWidth="94.0" text="Scores" />
+      <Button fx:id="btnExit" layoutX="442.0" layoutY="333.0" mnemonicParsing="false" onMouseClicked="#exitGame" prefHeight="36.0" prefWidth="94.0" text="Exit" />
+      <Button fx:id="btnInfo" layoutX="442.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#showInfo" prefHeight="36.0" prefWidth="94.0" text="Info" />
+      <VBox fx:id="infoBox" layoutX="186.0" layoutY="180.0" opacity="0.69" prefHeight="185.0" prefWidth="229.0" style="-fx-background-color: #FFFFFF;" visible="false">
+         <children>
+            <TextFlow prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text rotate="-15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info" textAlignment="CENTER" translateX="90.0">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="This game is called Sokoban. The player needs to control the worker to place all the boxes into the right places(where the diamonds are at). Players can use &quot;⬆⬇⬅➡&quot; or &quot;WASD&quot; to control the keeper. Mind traps on the way and use black holes for teleportation! Enjoy!" translateY="20.0" wrappingWidth="279.42657470703125">
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#ddd5d5" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+   </children>
+</Pane>

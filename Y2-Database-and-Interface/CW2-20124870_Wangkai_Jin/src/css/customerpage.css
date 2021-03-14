@@ -1,0 +1,174 @@
+*{
+        color:#f1e2e2;
+    }
+        body {
+            background: url('../img/loginbackground2.jpg') no-repeat;
+            background-size: unset;
+            margin-left: 10%;
+        }
+
+        header ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: arial;
+        }
+
+            header ul li {
+                float: left;
+                width: 200px;
+                height: 40px;
+                background-color: black;
+                opacity: .8;
+                line-height: 40px;
+                text-align: center;
+                font-size: 20px;
+                margin-right: 5px;
+            }
+
+                header ul li a {
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                }
+
+                    header ul li a:hover {
+                        background-color: green;
+                    }
+
+                header ul li ul li {
+                    display: none;
+                }
+
+                header ul li:hover ul li {
+                    display: block;
+                }
+                .home{
+                    background:green;
+                }
+    body header>ul{
+        margin-top:30px;
+        margin-left:100px;
+    }
+    div.main{
+        background:transparent  ;
+        margin:0px;
+        top:100px;
+        left:1%;
+        position:relative;
+        height:600px;
+        width:1200px;
+    }
+    div.maskpic{
+        background-color:rgba(206, 200, 200, 0.39);
+	    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        width:600px;
+        height:600px;
+        border-left:1px solid;
+        border-right:none;
+        border-left:none;
+    }
+    div.maskform{
+        background-color:rgba(206, 200, 200, 0.39);
+	    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        position:absolute;
+        top:0;
+        right:0;
+        float:right;
+        width:600px;
+        height:600px;
+    }
+    h1{
+        position:relative;
+        top:30px;
+        left:70px;
+        color:black;
+    }
+    form.masks ul {        
+        position:relative;
+        top:30px;
+        left:5px;
+        width: 300px;
+        list-style: none;
+    }
+        form.masks ul li {
+            width:400px;
+            margin-top: 20px;
+        }
+        input[type='text'] {
+            height: 30px;
+            width: 200px;
+            position: relative;
+            margin-left: 10px;
+            border: none;
+            color:black;
+            border-bottom: 4px solid #808080;
+        }
+        input[type='button']{
+            color:black;
+            font-size:1em;
+        }
+	.buy{
+        background-color:#4b8873;
+        margin-left:200px;
+        padding:8px;
+        width:6em;
+        height:2.7em;
+	    border-radius:5px;
+	    border:1px solid ;
+	    font-family:Arial;
+	    font-size:15px;
+        }
+            .buy:hover{
+                width:6.2em;
+                height:3.2em;
+            }
+	.grant{
+		background-color:white;
+		border-radius:5px;
+		border:1px solid #566963;
+		display:inline-block;
+		color:black;
+		font-family:Arial;
+		font-size:15px;
+		padding:5px 5px;
+		text-decoration:none;
+		margin-left:3%;
+	}
+	.grant:hover {
+		background-color:#6c7c7c;
+	}
+	.grant:active {
+		position:relative;
+		top:1px;
+	}	
+        
+
+            label {
+                font-size: 1.2em;
+                width: 120px;
+                display: inline-block;
+                line-height: 30px;
+                text-align: left;
+                position: relative;
+                color:black;
+            }
+    select{
+        color:black;
+	    width:15em;
+	    height:2em;
+    }
+    .repname{
+		margin-left:3em;
+		position:relative;
+		width:12em;
+	}
+	option{color:black;}
+	.mask{
+		border:1px solid;
+		margin-top:10%;
+		margin-left:10%;
+		height:400px;
+		width:450px;
+		box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	}

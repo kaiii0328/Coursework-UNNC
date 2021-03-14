@@ -1,0 +1,128 @@
+body {
+            background: url('../img/loginbackground2.jpg') no-repeat;
+            background-size: unset;
+            margin-left: 10%;
+        }
+
+        header ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-family: arial;
+        }
+
+            header ul li {
+                float: left;
+                width: 200px;
+                height: 40px;
+                background-color: black;
+                opacity: .8;
+                line-height: 40px;
+                text-align: center;
+                font-size: 20px;
+                margin-right: 20px;
+            }
+
+                header ul li a {
+                    text-decoration: none;
+                    color: white;
+                    display: block;
+                }
+
+                    header ul li a:hover {
+                        background-color: green;
+                    }
+
+                header ul li ul li {
+                    display: none;
+                }
+
+                header ul li:hover ul li {
+                    display: block;
+                }
+		.current{
+			background:green;
+		}
+        body header > ul {
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+	div.main {
+            background-color: rgba(206, 200, 200, 0.39);
+            box-shadow: 0 5px 15px rgba(0,0,0,.5);
+            top: 100px;
+            margin-left:1%;
+            position: relative;
+            height: 600px;
+            width: 1200px;
+        }
+	table { 
+  			border-spacing: 1; 
+  			border-collapse: collapse; 
+			border-left:1px solid;
+			border-right:1px solid;
+			border-bottom:1px solid;
+  			background:white;
+  			border-radius:6px;
+  			overflow:hidden;
+  			max-width:800px; 
+  			width:100%;
+ 			margin:0 auto;
+  			position:relative;
+			}
+  
+  	         td,th { padding-left:40px; text-align:center;color:black;}
+
+  		thead tr { 
+  			  height:60px;
+    			background:#3b2f45;
+    			font-size:20px;
+  		}		
+		thead tr th{color:white;}
+		tr td{font-size:16px;}
+		.delete{
+			color:#fff;
+			text-transform:uppercase;
+			text-decoration:none;
+			background:#ed3330;
+			padding:20px;	
+			border-radius:5px;
+			display:inline-block;
+			border:none;
+			transition:all 0.4s ease 0s;
+		}
+        h2{
+		    text-align:center;
+		    margin-top:0px;
+		    color:#90353B;
+		    width:500px;
+		    margin-left:28%;
+		    font-weight:bolder;
+		    font-size:35px;
+	}
+	.page{
+		margin-top:1em;
+		position:relative;
+		margin-left:40%;
+	}
+	
+	.pagebutton {
+		background-color:#3b2f45;
+		border-radius:5px;
+		border:1px solid #566963;
+		display:inline-block;
+		color:white;
+		font-family:Arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:11px 23px;
+		text-decoration:none;
+		margin:.6em;
+	}
+	.pagebutton:hover {
+		background-color:#6c7c7c;
+	}
+	.pagebutton:active {
+		position:relative;
+		top:1px;
+	}

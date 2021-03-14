@@ -1,0 +1,11 @@
+// this chip calculates the subtraction
+CHIP Sub{
+    IN x[16], y[16];	
+    OUT out[16];
+
+    PARTS:
+	Add16(a=y,b[0..15]=true,out=minusy); //minusy=y-1
+	Not16(in=minusy,out=noty);	//-y=not(y+(-1))
+	Add16(a=x,b=noty,out=out);	//x-y=x+(-y)
+	
+}

@@ -1,0 +1,35 @@
+	.data
+msg: .asciiz "input a number:"
+msg2: .asciiz "it is a odd number.\n"
+msg3: .asciiz "it is an even number.\n"
+	.text
+	.globl main
+main:
+	la $a0,msg
+	li $v0,4
+	syscall
+	
+	li $v0,5
+	syscall
+	
+	add $t1,$zero,$v0  #t0 stores x
+loop:
+	sub $t1,$t1,2
+	beq $t1,$zero,even  #==0
+	slt $t4,$t1,$zero,	#<0
+	beq $t4,1,odd
+	j loop
+even:
+	la $a0,msg2
+	li $v0,4
+	syscall
+	
+	li $v0,10
+	syscall
+odd:
+	la $a0,msg3
+	li $v0,4
+	syscall
+	
+	li $v0,10
+	syscall

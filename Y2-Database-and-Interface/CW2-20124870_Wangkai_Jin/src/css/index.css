@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+    }
+
+li {
+     float: left;
+    }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 19px;
+    text-decoration: none;
+    font-size: 19px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+    }
+
+div.news1{
+    position: relative;
+    border: 1px solid;  
+    width: 58em;
+    height:400px;
+    margin-top: 20px;
+    margin-left: 5%;            
+}
+div.b1{
+    border: 1px solid;  
+    width: 28em;
+    height:20em;
+    margin-top: 30px;
+    margin-left: 5%;
+    
+}
+div.b2{
+    border: 1px solid;  
+    width: 28em;
+    height:25em;
+    margin-top: 30px;
+    margin-left: 5%;
+    position: absolute;
+    top:2.4em;
+    right:3em;
+}
+.b3{
+    border: 1px solid;  
+    width: 28em;
+    height:20em;
+    margin-top: 30px;
+    margin-left: 5%;
+    position: absolute;
+    top:29.5em;
+    left:30em;
+}
+.b4{
+    border: 1px solid;  
+    width: 28em;
+    height:20em;
+    margin-top: 30px;
+    margin-left: 5%;
+    position: absolute;
+    top:29.5em;
+    left:59em;
+}
+h1.co{   
+    margin:6px;
+    position: absolute;
+    top:10em;
+    left:4em;        
+}
+h1.people{   
+    margin:6px;
+    position: absolute;
+    top:1.5em;
+    right:3.3em;        
+}
+h1.red{   
+    margin:6px;
+    position: absolute;
+    top:6em;
+    left:4em;   
+    color:whitesmoke;    
+}
+h1.man{   
+    margin:6px;
+    position: absolute;
+    top:6em;
+    left:3.5em;   
+    color:whitesmoke;    
+}
+h1.smile{   
+    margin:6px;
+    position: absolute;
+    top:22em;
+    left:5em;   
+    color:whitesmoke;    
+}
+h1:hover{                      
+    color:blue;
+}
+img.p1{
+    width: 58em;
+    height:400px;
+}
+img.p2{
+    width: 28em;
+    height:25em;
+}
+img.p3{
+    width: 28em;
+    height:20em;
+}
+img.p4{
+    width: 28em;
+    height:20em;
+}

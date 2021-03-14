@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to Woolin Auto</title>
+    <link rel="stylesheet" type="texdt/css" href="css/login.css"/>
+</head>
+<body>
+    <div class="login">
+        <h1>Face Mask Management System</h1>
+        <hr SIZE=3>
+        <div class="form">
+                <form action="login.php" method="post">
+                    <ul>
+                        <li>
+                            <label>Sign in as:</label>
+                            <select name="role">
+                                <option>- please choose -</option>
+                                <option> Customer</option>
+                                <option> Sales Representative</option>
+                                <option> Manager</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Usename：</label>
+                            <input type="text" name="username" placeholder="please enter your account" />
+                        </li>
+                        <li>
+                            <label>Password：</label>
+                            <input  type="password" name="password" placeholder="please enter password" />
+                        </li>
+                        <li>
+                            <input class="myButton" type="submit" value="Login" />
+                            <a href="register.html"><input class="myButton" type="button" value=" Register" /></a>
+                        </li>
+                    </ul>
+                </form>
+        </div>
+    </div>
+</body>
+</html>
